@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="/styles/style.css" rel="stylesheet">
+  <link href="/styles/fonts.css" rel="stylesheet">
+  <link rel="icon" href="./components/images/baixados.jpeg">
+  <title>Alves Barbearia</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div id="title">
+      <img src="./components/images/baixados.jpeg" alt="icone da barbearia" class="logo">
+      <div>
+        <h1><span>Alves</span></h1>
+        <h1>Barbearia</h1>
+      </div>
+    </div>
+
+    <ul>
+      <li><a href="https://www.google.com/maps/place/Barbearia+Edson+Junior">Localização</a></li>
+      <li><a href="https://www.instagram.com/alvesc02/">Contato</a></li>
+    </ul>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <article>
+
+      <!-- Títulos em colunas -->
+      <div class="titulo-flex">
+        <div class="coluna-esquerda">
+          <h2><span>Agende seu horário agora</span></h2>
+          <h2>Na Alves Barbearia</h2>
+        </div>
+        <div class="coluna-direita">
+          <h3><a href="#"><span>Contrate o nosso plano</span></a></h3>
+          <h3><a href="#">Plano Mensal!</a></h3>
+        </div>
+      </div>
+      <p>Torne-se a sua melhor versão!</p>
+
+      <!-- Cards -->
+      <section class="cards">
+
+        <div class="card1">
+          <img src="./components/images/Imagem Barba.png" alt="Serviço de Barba">
+          <div class="Barba">Barba</div>
+          <div class="Barba-info">Quero fazer apenas a Barba.</div>
+          <div class="Preço">R$ 30,00</div>
+          <div class="btns">
+            <button onclick="mudarNome(this)" class="btn1">Contratar Serviço</button>
+          </div>
+        </div>
+
+        <div class="card2">
+          <img src="./components/images/imagem cabelo e barba.png" alt="Serviço de Cabelo e Barba">
+          <div class="CB">Cabelo & Barba</div>
+          <div class="CB-info">Quero fazer Cabelo e Barba.</div>
+          <div class="Preço">R$ 60,00</div>
+          <div class="btns">
+            <button onclick="mudarNome(this)" class="btn1">Contratar Serviço</button>
+          </div>
+        </div>
+
+        <div class="card3">
+          <img src="./components/images/Imagem Cabelo.png" alt="Serviço de Cabelo">
+          <div class="C">Cabelo</div>
+          <div class="C-info">Quero fazer Cabelo.</div>
+          <div class="Preço">R$ 40,00</div>
+          <div class="btns">
+            <button onclick="mudarNome(this)" class="btn1">Contratar Serviço</button>
+          </div>
+        </div>
+
+        <script>
+          function mudarNome(botao) {
+            if (botao.textContent === "Contratar Serviço") {
+              botao.textContent = "Serviço Contratado";
+              botao.classList.add("ativo"); // Opcional: para mudar cor ou estilo
+            } else {
+              botao.textContent = "Contratar Serviço";
+              botao.classList.remove("ativo"); // Remove o estilo se necessário
+            }
+  }
+</script>
+
+      </section>
+
+      <!-- Formulário -->
+      <form>
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="tel" name="telefone" placeholder="Celular" required>
+        <input type="datetime-local" name="horario"
+               min="2025-06-26T08:00" max="2060-06-26T20:00" required>
+
+        <div>
+          <input type="submit" value="Enviar">
+        </div>
+      </form>
+
+    </article>
+  </main>
+
+
+
+</body>
+</html>
